@@ -1,0 +1,14 @@
+# manifests/route.yaml
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: myapp
+spec:
+  to:
+    kind: Service
+    name: myapp
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect

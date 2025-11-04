@@ -1,0 +1,12 @@
+# manifests/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  selector:
+    app: myapp
+  ports:
+    - name: https
+      port: 8443
+      targetPort: 8443
