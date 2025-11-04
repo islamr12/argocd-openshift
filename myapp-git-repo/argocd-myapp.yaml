@@ -3,16 +3,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp
-  namespace: argocd          # this is where Argo CD runs
+  namespace: openshift-gitops          # this is where Argo CD runs
 spec:
   project: default
   source:
-    repoURL: https://github.com/islamr12/argocd-openshift.git
+    repoURL: https://github.com/islamr12/argocd-openshift
     targetRevision: main
     path: manifests
   destination:
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: bubble-animation
   syncPolicy:
     automated:
       prune: true
