@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
     namespace: bubble-animation
   syncPolicy:
-    automated:
+    #automated:
       #prune: true #automated sync
       #selfHeal: false
     syncOptions:
