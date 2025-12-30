@@ -14,7 +14,7 @@ spec:
     namespace: bubble-animation
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: false
+      #prune: true #automated sync
+      #selfHeal: false
     syncOptions:
       - CreateNamespace=true
